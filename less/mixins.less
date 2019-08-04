@@ -1,42 +1,48 @@
 // Mixins in here
 
 .headers(@justify, @align) {
-    display: flex;
-    justify-content: @justify;
-    align-self: @align;
-    background-color: white;
+  display: flex;
+  justify-content: @justify;
+  align-self: @align;
+  background-color: white;
+
+  @media @mobile {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .navText(@size, @font) {
-    font-size: @size;
-    font-family: @font;
-    text-decoration: none;
-    padding: 0px 25px 0 25px;
-    color: black;
+  font-size: @size;
+  font-family: @font;
+  text-decoration: none;
+  padding: 0px 25px 0 25px;
+  color: black;
 }
 
 .navbar() {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 
-  .navItems() {
-    float: right;
-    display: block;
-    color: #000000;
-    text-align: center;
-    text-decoration: none;
+.navItems() {
+  float: right;
+  display: block;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
 
-    &:hover {
-        color: lighten(black, 20%)
-    }
+  &:hover {
+    cursor: pointer;
+    color: lighten(black, 20%)
   }
+}
 
-  .buttons (@width, @padding, @radius, @size) {
-    width: @width;
-    border-radius: @radius;
-    border-color: transparent;
-    padding: @padding;
-    font-size: @size;
-  }
+.buttons (@width, @padding, @radius, @size) {
+  width: @width;
+  border-radius: @radius;
+  border-color: transparent;
+  padding: @padding;
+  font-size: @size;
+}
