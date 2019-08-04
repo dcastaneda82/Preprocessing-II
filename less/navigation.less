@@ -1,1 +1,21 @@
 // Navigation Styles here
+.navHdr {
+
+    .navbar();
+
+    nav {
+        .headers(flex-end, center);
+
+        @media @mobile {
+            width: 100%;
+            align-self: center;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        a {
+            .navText(1.6rem, Verdana);
+            .navItems();
+        }
+    }
+}

@@ -1,4 +1,29 @@
+.navHdr {
+  .headers(space-evenly, center);
+  border-bottom: 2px dashed silver;
+  padding: 15px 0 15px 0px;
+
+
+
+  h1 {
+    padding: 0 0 10px 0;
+  }
+}
+
 .home {
+
+  .welcome {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    img {
+      padding-bottom: 20px;
+      border-radius: 0 0 20px 20px;
+    }
+
+
+  }
 
   .content-section {
     margin: 30px 0;
@@ -6,8 +31,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -53,9 +77,39 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      width: 100%;
+      flex-direction: column;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width: 75%;
+        align-self: center;
+      }
+
+      .btn {
+        .buttons(80%, 7px 7px, 7px, 1.55rem);
+        background-color: rgb(3, 148, 148);
+        color: white;
+
+        &:hover {
+          cursor: pointer;
+          color: darken(white, 70%);
+          background-color: lighten(rgb(3, 148, 148), 50%);
+        }
+
+        @media @mobile {
+          width: 100%;
+          border-radius: 15px;
+
+        }
+      }
     }
   }
-}// home
+}
+
+// home
