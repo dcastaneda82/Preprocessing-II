@@ -1,4 +1,26 @@
-.home {
+
+
+.navHdr {
+    .headers(space-evenly, center);
+    border-bottom: 2px dashed silver;
+    padding: 15px 0 15px 0px;
+
+  }
+  
+  .home {
+
+    .welcome {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      img {
+        padding-bottom: 20px;
+        border-radius: 0 0 20px 20px;
+      }
+
+      
+    }
 
   .content-section {
     margin: 30px 0;
@@ -6,8 +28,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -56,6 +77,14 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      .btn {
+        .buttons(80%, 7px 7px, 7px, 1.55rem);
+        background-color: rgb(3, 148, 148);
+        color: white;
+      }
     }
   }
-}// home
+}
+
+// home
